@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+
+
+<style>
+
+	.container {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.container li {
+		list-style: none;
+		padding: 1rem 3rem;
+		box-shadow:
+		  0px 0px 5.3px rgba(0, 0, 0, 0.065),
+		  0px 0px 17.9px rgba(0, 0, 0, 0.095),
+		  0px 0px 80px rgba(0, 0, 0, 0.16);
+		font-size: 1.5rem;
+		cursor: pointer;
+		position: relative;
+	}
+
+	.container li::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 0%;
+		height: 3px;
+		background-color: #212121;
+		transition: 0.3s ease;
+	}
+
+	.container li:hover::after {
+		left: 0;
+		width: 100%;
+	}
+
+	.container li a {
+		display: block;
+		text-decoration: none;
+	}
+
+</style>
+
+<body>
+	<div class="container">
+		<li class="list-item">
+			<a href='#'>Home</a>
+		</li>
+	</div>
+</body>
+</html>
